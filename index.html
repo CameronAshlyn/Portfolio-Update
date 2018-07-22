@@ -8,10 +8,9 @@
     <title>Responsive-Portfolio</title>
     <!-- CSS Reset -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <!-- Bootstrap -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-        crossorigin="anonymous"> -->
-    <!-- My CSS -->
+     <!-- W3 Styles -->
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <!--My CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text" href="assets/fonts">
 </head>
@@ -29,13 +28,10 @@
 <body>
 
     <!-- Body Border-->
-
-
-    <div id="left"></div>
-    <div id="right"></div>
-    <div id="top"></div>
-    <div id="bottom"></div>
-
+    <div class="border" id="left"></div>
+    <div class="border" id="right"></div>
+    <div class="border" id="top"></div>
+    <div class="border" id="bottom"></div>
     <!-- End Border -->
 
 
@@ -43,19 +39,21 @@
 
 
     <!-- Nav Buttons -->
-
     <div class="nav">
-
-        <a href="index.html" class="nav__home" id="home">Home</a>
-        <a href="index.html" class="nav__about" id="about">About</a>
-        <a href="index.html" class="nav__contact" id="contact">Contact</a>
-        <a href="index.html" class="nav__feed" id="feed">Feed</a>
-
+        <a href="index.html" class="nav__link" id="home">Home</a>
+        <a href="index.html" class="nav__link" id="about">About</a>
+        <a href="index.html" class="nav__link" id="contact">Contact</a>
+        <a href="index.html" class="nav__link" id="feed">Feed</a>
     </div>
-
     <!-- End Nav Buttons -->
 
+
     <!-- Home Page-->
+    <ul class='project-tiles'>
+        <li class='project_title'>
+
+        </li>
+    </ul>
     <!-- End Home Page-->
 
 
@@ -65,14 +63,10 @@
 
     <!-- Contact Page-->
     <div class="contactPage">
-
-                <a href="https://www.linkedin.com/in/cameron-taylor-ab373a55/" class="contactPage__email">Email</a>
+                <a href="https://www.linkedin.com/in/cameron-taylor-ab373a55/" class="contactPage__link">Email</a>
                 <a href="https://www.linkedin.com/in/cameron-taylor-ab373a55/" class="contactPage__linkedin">Linkedin</a>
                 <a href="index.html" class="contactPage__behance">Behance</a>
                 <a href="assets/images/CameronTaylor.pdf" class="contactPage__resume">Resume</a>
-                
-            
-        
     </div>
     <!-- End Contact Page-->
 
@@ -116,7 +110,7 @@
 
 
 
-    <!-- Bootstrap jQuery, Popper.js, Javascript plugins-->
+    <!-- Bootstrap, jQuery, Popper.js, Javascript plugins-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"

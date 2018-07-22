@@ -1,64 +1,52 @@
 $(document).ready(function() {
     console.log("ready!");
-  
-    // home
-    //border changes to black
-    $("#home").on({
-      click: function() {
-        event.preventDefault();
-        $("#left").css("background-color", "rgb(43, 43, 43)");
-        $("#top").css("background-color", "rgb(43, 43, 43)");
-        $("#right").css("background-color", "rgb(43, 43, 43)");
-        $("#bottom").css("background-color", "rgb(43, 43, 43)");
-      }
-    });
-  
-    // about
-    //border changes to green
-    $("#about").on({
-      click: function() {
-        event.preventDefault();
-        $("#left").css("background-color", "rgb(255, 208, 84)");
-        $("#top").css("background-color", "rgb(255, 208, 84)");
-        $("#right").css("background-color", "rgb(255, 208, 84)");
-        $("#bottom").css("background-color", "rgb(255, 208, 84)");
-        //
-      }
-    });
-  
-    // contact
-    //border changes to green
-    $("#contact").on({
-      click: function() {
-        event.preventDefault();
-        $("#left").css("background-color", "#008d51");
-        $("#top").css("background-color", "#008d51");
-        $("#right").css("background-color", "#008d51");
-        $("#bottom").css("background-color", "#008d51");
-        $(".contactPage").css("display", "inline");
-        $(this).toggleClass("--linked");
-      };
-      mouseover mouseout: function() {
-          if ()
-      }
+
       
+    // FUNCTIONS FOR NAVIGATION
+
+    $('div.nav a').on('click', function() {
+      event.preventDefault();
+      if ($(this).is('#home')) {
+        // WHEN HOME IS CLICKED: 
+        // changes border color to blue
+        console.log("this changed");
+        $('div.border#left, #top, #right, #bottom').css('background-color', 'rgb(153, 204, 255)');
+
+      } else if ($(this).is('#about')) {
+         // WHEN ABOUT IS CLICKED: 
+        // changes border color to yellow, displays contact
+        $('div.border#left, #top, #right, #bottom').css('background-color', 'rgb(255, 203, 41)');
+
+      } else if ($(this).is('#contact')) {
+        // WHEN CONTACT IS CLICKED: 
+        // changes border color to green, displays contact
+        $('div.border#left, #top, #right, #bottom').css('background-color', '#008d51');
+        $('div.contactPage').css('display', 'inline');
+        
+      } else if ($(this).is('#feed')) {
+        // WHEN CONTACT IS CLICKED: 
+        // changes border color to green, displays contact
+        $('div.border#left, #top, #right, #bottom').css('background-color', 'rgb(43, 43, 43)');
+      }
     });
-  // if clicked is true remove hover class if false hover
-    $("#contact").on("mouseover mouseout", function(){
-      $(this).toggleClass("--hover");
-      
+
+  // ENDS FUNCTIONS FOR NAVIGATION 
+
+   
+
+  // ANIMATIONS FOR NAVIGATION
+  $('div.nav a').on('click', function() {
+    event.preventDefault();
+    if ($(this).hasClass('--linked')) {
+      $(this).removeClass('--linked');
+    } else {
+      $('a.--linked').removeClass('--linked')
+      $(this).addClass('--linked');
+    }
   });
+      
+
   
-    // feed
-    //border changes to green
-    $("#feed").on({
-      click: function() {
-        event.preventDefault();
-        $("#left").css("background-color", "rgb(153, 204, 255)");
-        $("#top").css("background-color", "rgb(153, 204, 255)");
-        $("#right").css("background-color", "rgb(153, 204, 255)");
-        $("#bottom").css("background-color", "rgb(153, 204, 255)");
-      }
-    });
+  
   });
   
